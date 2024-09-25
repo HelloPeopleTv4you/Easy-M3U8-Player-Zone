@@ -6,7 +6,7 @@ document.getElementById('play-button').addEventListener('click', function() {
     playerContainer.innerHTML = ''; // Clear previous player
 
     if (playerType === 'videojs') {
-        playerContainer.innerHTML = `<video id="video-player" class="video-js" controls preload="auto" width="100%" height="100%">
+        playerContainer.innerHTML = `<video id="video-player" class="video-js" controls preload="auto" width="100%" height="300px">
             <source src="${url}" type="application/x-mpegURL">
         </video>`;
         videojs("video-player").ready(function() {
@@ -16,7 +16,7 @@ document.getElementById('play-button').addEventListener('click', function() {
         playerContainer.innerHTML = `<div id="jwplayer-container"></div>`;
         jwplayer("jwplayer-container").setup({
             file: url,
-            width: "100%",
+            width: "300px",
             height: "100%"
         });
         const jwplayerScript = document.createElement('script');
