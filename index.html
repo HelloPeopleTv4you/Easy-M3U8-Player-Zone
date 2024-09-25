@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy M3U8 Player Zone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Easy M3U8 Player Zone</h1>
+        <input type="text" id="stream-url" placeholder="Enter M3U8 URL">
+        
+        <select id="player-select">
+            <option value="videojs">Video.js Player</option>
+            <option value="jwplayer">JW Player</option>
+            <option value="clapper">Clapper Player</option>
+            <option value="shaka">Shaka Player</option>
+            <!-- Add more players as needed -->
+        </select>
+        
+        <button id="play-button">Play</button>
+        
+        <div id="player-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+</html>
