@@ -1,4 +1,3 @@
-# Easy-M3U8-Player-Zone
 # Easy M3U8 Player Zone
 
 Welcome to **Easy M3U8 Player Zone**! This project offers a versatile and user-friendly platform for playing M3U8 and HLS streams using multiple web-based players.
