@@ -1,3 +1,5 @@
+let player; // Global player variable
+
 document.getElementById('play-button').addEventListener('click', function() {
     const url = document.getElementById('stream-url').value;
     const playerType = document.getElementById('player-select').value;
@@ -6,6 +8,11 @@ document.getElementById('play-button').addEventListener('click', function() {
     playerContainer.innerHTML = ''; // Clear previous player
 
     if (playerType === 'videojs') {
+        // Dispose of the previous Video.js player if it exists
+        if (player) {
+            player.dispose();
+        }
+
         // Create Video.js player
         const videoElement = document.createElement('video');
         videoElement.id = 'video-player';
@@ -23,13 +30,10 @@ document.getElementById('play-button').addEventListener('click', function() {
         playerContainer.appendChild(videoElement);
 
         // Initialize Video.js
-        if (window.videojs) {
-            const player = videojs('video-player');
-            player.ready(function() {
-                this.src({ type: "application/x-mpegURL", src: url });
-                this.play(); // Automatically play the video
-            });
-        }
+        player = videojs('video-player', {}, function() {
+            this.src({ type: "application/x-mpegURL", src: url });
+            this.play(); // Automatically play the video
+        });
     } else if (playerType === 'jwplayer') {
         playerContainer.innerHTML = `<div id="jwplayer-container" style="width: 100%; height: 300px;"></div>`;
         const jwplayerScript = document.createElement('script');
