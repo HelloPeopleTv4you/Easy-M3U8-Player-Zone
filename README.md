@@ -3,6 +3,10 @@
 Welcome to **Easy M3U8 Player Zone**! This project offers a versatile and user-friendly platform for playing M3U8 and HLS streams using multiple web-based players.
 
 ## Features
+- Easy M3U8 and HLS Player Zone With multiple player
+- Free  All player
+- A simple interface to input your stream URLs and select your preferred player.
+- Player Preview Show
 
 - **Multiple Player Support**: Enjoy seamless playback with various players, including:
   - Clapper Player
